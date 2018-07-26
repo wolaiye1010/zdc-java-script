@@ -1,0 +1,41 @@
+# Operating System Files
+
+*.DS_Store
+Thumbs.db
+*.sw?
+.#*
+*#
+*~
+*.sublime-*
+
+# Build Artifacts
+
+.gradle/
+build/
+target/
+bin/
+dependency-reduced-pom.xml
+
+# Eclipse Project Files
+
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA Files
+
+*.iml
+*.ipr
+*.iws
+*.idea
+
+
+conf/d659c9a9eb15c9e693275c98de8d309e
+conf/f62a721a9539ff317c6584312eef32c7/
+conf/confcenter/nameprod.wtable.58dns.org_132841486.txt
+conf/confcenter/cache
+conf/confcenter-localcache-path
+src/main/resources/config/d659c9a9eb15c9e693275c98de8d309e/
+.reviewboardrc
+diff.patch
+logs/
