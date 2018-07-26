@@ -17,7 +17,7 @@
 ## 算法demo
 参见code
 ### 算法作者
-根据George Varghese 和 Tony Lauck 1996 年的论文 [Hashed and Hierarchical Timing Wheels: data structures to efficiently implement a timer facility](http://cseweb.ucsd.edu/users/varghese/PAPERS/twheel.ps.Z)
+根据George Varghese 和 Tony Lauck 1996 年的论文 [Hashed and Hierarchical Timing Wheels: data structures to efficiently implement a timer facility](https://github.com/wolaiye1010/zdc-java-script/blob/master/twheel.pdf)
 
 ## 算法原理：
 ![1](http://img.my.csdn.net/uploads/201209/29/1348926970_9123.png)
@@ -71,11 +71,16 @@ TimeWheelService instance = TimeWheelService.instance;
         Thread.sleep(Integer.MAX_VALUE);
 ```
 [github java 实现](https://github.com/wolaiye1010/zdc-java-script](https://github.com/wolaiye1010/zdc-java-script)
+
 [实现](https://github.com/wolaiye1010/zdc-java-script/blob/master/src/main/java/com/zdc/java/script/TimeWheelService.java)
+
 [使用](https://github.com/wolaiye1010/zdc-java-script/blob/master/src/test/java/com/zdc/java/script/TimeWheelTest.java)
 
 [论文（英文）](https://github.com/wolaiye1010/zdc-java-script/blob/master/twheel.pdf)
+
 [参考博文（英文）](http://www.embeddedlinux.org.cn/RTConforEmbSys/5107final/LiB0071.html)
+
 [惊艳的时间轮定时器](https://www.cnblogs.com/zhongwencool/p/timing_wheel.html)
+
 [Linux 下定时器的实现方式分析](https://www.ibm.com/developerworks/cn/linux/l-cn-timers/))
 
