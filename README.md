@@ -66,9 +66,6 @@ TimeWheelService instance = TimeWheelService.instance;
                 }
             }
         },2000);
-
-
-        Thread.sleep(Integer.MAX_VALUE);
 ```
 [github java 实现](https://github.com/wolaiye1010/zdc-java-script](https://github.com/wolaiye1010/zdc-java-script)
 
