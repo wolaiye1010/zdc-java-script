@@ -74,10 +74,6 @@ linux 定时器，游戏buffer
 
 参考资料：
 
-[实现](https://github.com/wolaiye1010/zdc-java-script/blob/master/src/main/java/com/zdc/java/script/TimeWheelService.java)
-
-[使用](https://github.com/wolaiye1010/zdc-java-script/blob/master/src/test/java/com/zdc/java/script/TimeWheelTest.java)
-
 [论文（英文）](https://github.com/wolaiye1010/zdc-java-script/blob/master/twheel.pdf)
 
 [参考博文（英文）](http://www.embeddedlinux.org.cn/RTConforEmbSys/5107final/LiB0071.html)
