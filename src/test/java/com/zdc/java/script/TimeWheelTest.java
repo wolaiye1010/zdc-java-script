@@ -55,7 +55,6 @@ public class TimeWheelTest {
     @Test
     public void ScheduledExecutorService() throws InterruptedException {
         ScheduledExecutorService executorService = new ScheduledThreadPoolExecutor(2);
-        Timer time=new Timer();
         System.out.println("      start:"+new Date());
 
         executorService.schedule(new Runnable() {
@@ -82,6 +81,40 @@ public class TimeWheelTest {
                 }
             }
         },2000, TimeUnit.MILLISECONDS);
+
+
+        Thread.sleep(Integer.MAX_VALUE);
+    }
+
+
+    @Test
+    public void TimeWheel() throws InterruptedException {
+        TimeWheelService instance = TimeWheelService.instance;
+        System.out.println("      start:"+new Date());
+        instance.schedule(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("task1 start:"+new Date());
+//                throw new RuntimeException("aaa");
+                try {
+                    Thread.sleep(4000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        },1000);
+
+        instance.schedule(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("task2 start:"+new Date());
+                try {
+                    Thread.sleep(4000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        },2000);
 
 
         Thread.sleep(Integer.MAX_VALUE);
