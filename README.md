@@ -18,30 +18,8 @@
 
 ## 有没有更高效的算法呢
 # 有的 那就是 时间轮 调度算法
-## 算法demo
-参见code
-### 算法作者
-根据George Varghese 和 Tony Lauck 1996 年的论文 [Hashed and Hierarchical Timing Wheels: data structures to efficiently implement a timer facility](https://github.com/wolaiye1010/zdc-java-script/blob/master/twheel.pdf)
-
-## 算法原理：
-![1](http://img.my.csdn.net/uploads/201209/29/1348926970_9123.png)
-
-### 问题:轮子过大
-
-### 解决办法：多层时间轮
-<img src="http://pic1.58cdn.com.cn/dwater/fang/big/n_v27a8a06eebb464455a2d9d276610d29b4.jpg" width="400" />
-
-### 应用
-linux 定时器，游戏buffer
-
-### 算法对比
-实现方式|加入任务|取消任务|运行任务
----|:--:|---:|---:
-基于排序链表|O(n)|	O(1)|	O(1)
-基于最小堆|	O(lgn)|	O(1)|	O(1)
-基于时间轮|	O(1)|	O(1)|	O(1)
-
-java代码实现及使用：
+## 算法java实现 及使用demo
+[java实现](https://github.com/wolaiye1010/zdc-java-script/blob/master/src/main/java/com/zdc/java/script/TimeWheelService.java)
 #### 使用
 ```javascript 1.8
 TimeWheelService instance = TimeWheelService.instance;
@@ -71,7 +49,28 @@ TimeWheelService instance = TimeWheelService.instance;
             }
         },2000);
 ```
-[github java 实现](https://github.com/wolaiye1010/zdc-java-script](https://github.com/wolaiye1010/zdc-java-script)
+### 算法作者
+根据George Varghese 和 Tony Lauck 1996 年的论文 [Hashed and Hierarchical Timing Wheels: data structures to efficiently implement a timer facility](https://github.com/wolaiye1010/zdc-java-script/blob/master/twheel.pdf)
+
+## 算法原理：
+![1](http://img.my.csdn.net/uploads/201209/29/1348926970_9123.png)
+
+### 问题:轮子过大
+
+### 解决办法：多层时间轮
+<img src="http://pic1.58cdn.com.cn/dwater/fang/big/n_v27a8a06eebb464455a2d9d276610d29b4.jpg" width="400" />
+
+### 应用
+linux 定时器，游戏buffer
+
+### 算法对比
+实现方式|加入任务|取消任务|运行任务
+---|:--:|---:|---:|---:
+基于排序链表|O(n)|	O(1)|	O(1)
+基于最小堆|	O(lgn)|	O(1)|	O(1)
+基于时间轮|	O(1)|	O(1)|	O(1)
+
+java代码实现及使用：
 
 [实现](https://github.com/wolaiye1010/zdc-java-script/blob/master/src/main/java/com/zdc/java/script/TimeWheelService.java)
 
@@ -85,3 +84,4 @@ TimeWheelService instance = TimeWheelService.instance;
 
 [Linux 下定时器的实现方式分析](https://www.ibm.com/developerworks/cn/linux/l-cn-timers/))
 
+    
