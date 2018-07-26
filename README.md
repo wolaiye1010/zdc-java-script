@@ -25,7 +25,7 @@
 ###问题:轮子过大
 
 ###解决办法：多层时间轮
-<img src="http://wiki.58corp.com/images/4/40/8c1001e93901213ff54a571550e736d12e2e95f9.jpg " width="400" />
+<img src="http://pic1.58cdn.com.cn/dwater/fang/big/n_v27a8a06eebb464455a2d9d276610d29b4.jpg" width="400" />
 
 
 
