@@ -1,4 +1,5 @@
 
+
 # 时间轮
 ## java调度方法：
 ### Timer，ScheduledExecutorService 
@@ -71,7 +72,7 @@ linux 定时器，游戏buffer
 基于最小堆|O(lgn)|O(1)|O(1)
 基于时间轮|O(1)|O(1)|O(1)
 
-java代码实现及使用：
+参考资料：
 
 [实现](https://github.com/wolaiye1010/zdc-java-script/blob/master/src/main/java/com/zdc/java/script/TimeWheelService.java)
 
