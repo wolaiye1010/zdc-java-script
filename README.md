@@ -2,7 +2,7 @@
 # 时间轮
 ## java调度方法：
 ### Timer，ScheduledExecutorService 
-是时间复杂度 O(log(n))
+时间复杂度 O(log(n))
 因为它们使用的 是  最小堆的对排序，每当有新任务的时候都需要堆堆进行插入，
 堆排序插入的时间复杂度为 O(log(n))
 ### Timer 的问题：
