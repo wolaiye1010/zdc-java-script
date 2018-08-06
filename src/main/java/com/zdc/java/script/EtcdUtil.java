@@ -14,12 +14,13 @@ import java.util.concurrent.*;
  */
 public class EtcdUtil {
 
-    interface ListenCallBack{
-        void run(String data);
-    }
+    private static Client client = null;
 
-    interface CallBack{
-        void run(WatchEvent watchEvent);
+    public static synchronized Client getEtclClient() {
+        if (null == client) {
+            client = Client.builder().endpoints("http://10.9.193.121:2379", "http://10.9.193.135:2379", "http://10.9.193.136:2379").build();
+        }
+        return client;
     }
 
     private static final ExecutorService executorService= new ThreadPoolExecutor(0,
@@ -57,16 +58,6 @@ public class EtcdUtil {
         });
     }
 
-
-    private static Client client = null;
-
-    public static synchronized Client getEtclClient() {
-        if (null == client) {
-            client = Client.builder().endpoints("http://10.9.193.121:2379", "http://10.9.193.135:2379", "http://10.9.193.136:2379").build();
-        }
-        return client;
-    }
-
     /**
      * 根据指定的配置名称获取对应的value
      * @param key 配置项
@@ -102,6 +93,14 @@ public class EtcdUtil {
     public static void del(String key) {
         EtcdUtil.getEtclClient().getKVClient().delete(ByteSequence.fromString(key));
 
+    }
+
+    interface ListenCallBack{
+        void run(String data);
+    }
+
+    interface CallBack{
+        void run(WatchEvent watchEvent);
     }
 }
 
